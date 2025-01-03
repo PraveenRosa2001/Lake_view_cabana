@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="flex flex-col items-center justify-center">
                 <div>
                     <p className="font-economica text-[32px] pb-2 text-[rgba(207,181,59)] ">
-                        222 Malie Way | Maui, HI 96729 | 808.123.9876
+                        22256 Malie Way | Maui, HI 96729 | 808.123.9876
                     </p>
                 </div>
                 <div>
