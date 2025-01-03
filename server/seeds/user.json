@@ -1,0 +1,55 @@
+[
+  {
+    "username": "myself",
+    "password": "123",
+    "email": "me@gmail.com",
+    "city": "boulder",
+    "address": "10940",
+    "phone": "8884205849",
+    "Credit_card_number": 4242424242424242,
+    "Credit_card_year": 2026,
+    "Credit_card_month": 11,
+    "Credit_card_cvv": 2345,
+    "isAdmin": false
+  },
+  {
+    "username": "joe",
+    "password": "123",
+    "email": "joe@gmail.com",
+    "city": "Newark",
+    "address": "10940",
+    "phone": "8884205849",
+    "Credit_card_number": 4242424242424242,
+    "Credit_card_year": 2026,
+    "Credit_card_month": 11,
+    "Credit_card_cvv": 2345,
+    "isAdmin": false
+  },
+
+  {
+    "username": "Admin",
+    "password": "Admin",
+    "email": "Admin@admin.com",
+    "city": "Tucson",
+    "address": "10940",
+    "phone": "8884205849",
+    "Credit_card_number": 4242424242424242,
+    "Credit_card_year": 2026,
+    "Credit_card_month": 11,
+    "Credit_card_cvv": 2345,
+    "isAdmin": true
+  },
+  {
+    "username": "Toe",
+    "password": "123",
+    "email": "Toe@gmail.com",
+    "city": "Tucson",
+    "address": "10940",
+    "phone": "8884205849",
+    "Credit_card_number": 4242424242424242,
+    "Credit_card_year": 2026,
+    "Credit_card_month": 11,
+    "Credit_card_cvv": 2345,
+    "isAdmin": false
+  }
+]

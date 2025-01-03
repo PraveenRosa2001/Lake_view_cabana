@@ -1,0 +1,40 @@
+[
+  {
+    "roomNumber": 201,
+    "title": "deluxKing",
+    "price": 2000,
+    "desc": "the beautiful Delux room"
+  },
+  {
+    "roomNumber": 202,
+    "title": "deluxQueen",
+    "price": 1000,
+    "desc": "the beautiful single room"
+  },
+
+  {
+    "roomNumber": 203,
+    "title": "executiveKing",
+    "price": 5000,
+    "desc": "the beautiful pen house room"
+  },
+  {
+    "roomNumber": 204,
+    "title": "executiveQueen",
+    "price": 2000,
+    "desc": "the beautiful Delux room"
+  },
+  {
+    "roomNumber": 205,
+    "title": "choiceKing",
+    "price": 1000,
+    "desc": "the beautiful single room"
+  },
+
+  {
+    "roomNumber": 206,
+    "title": "choiceQueen",
+    "price": 5000,
+    "desc": "the beautiful pen house room"
+  }
+]
