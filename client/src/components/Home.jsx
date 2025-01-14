@@ -1,5 +1,4 @@
-import lux from "./lux.mp4";
-
+import { lux } from "../assets";
 import React, { useState } from "react";
 import { useDateContext } from "../utils/DateContext";
 import { useMutation, useQuery } from "@apollo/client";
@@ -63,9 +62,8 @@ const Home = () => {
         <video
           className="relative z-[-1] w-auto min-w-full max-w-none"
           muted
-          autoPlay
+          autoPlay="autoPlay"
           loop
-          playsInline
         >
           <source src={lux} type="video/mp4" />
           Your browser does not support the video tag.
