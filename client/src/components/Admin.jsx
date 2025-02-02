@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+// import React, { PureComponent } from "react";
 import ReactWeather, { useOpenWeather } from "react-open-weather";
 
 import {
