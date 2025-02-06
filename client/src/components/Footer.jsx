@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div className="bg-black text-white font-poppins pt-10 ">
+        <div id="footer-section" className="bg-black text-white font-poppins pt-10 ">
             <div className="flex flex-col items-center justify-center">
                 <div>
                     <p className="font-economica text-[32px] pb-2 text-[rgba(207,181,59)] ">
