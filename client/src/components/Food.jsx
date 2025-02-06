@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
-// import localImage from "../assets/oceanBanner";
+import "bootstrap/dist/css/bootstrap.min.css"; // For Bootstrap CSS
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; // For Bootstrap JS (necessary for the carousel functionality)
 
 const Food = () => {
   useEffect(() => {
@@ -10,12 +11,14 @@ const Food = () => {
     <div>
       {/* intro photo */}
       <section>
-        <img
-          src={require("../assets/oceanBanner.jpg")}
-          class="max-w-full h-auto"
-          alt="..."
-        />
-      </section>
+  <img
+    src={require("../assets/foodCollage.jpeg")}
+    className="w-full h-[100vh] object-cover"
+    alt="Lake View"
+  />
+</section>
+
+
 
       {/* about section */}
       <section className="p-4 bg-[rgba(207,181,59)]">
@@ -32,7 +35,7 @@ const Food = () => {
             in the very essence of the Malieian land we call home.
           </p>
           <img
-            src="https://images.unsplash.com/photo-1588123190131-1c3fac394f4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZWF0aW5nJTIwZm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            src={require("../assets/client.jpg")}
             alt="Pink Socks"
             className="border-solid border-black border-4 rounded max-w-[700px] max-w-sm h-auto transition-shadow ease-in-out duration-300 shadow-none shadow-black shadow-2xl"
           />
@@ -50,7 +53,7 @@ const Food = () => {
                   <img
                     alt="gallery"
                     class="block object-cover object-center w-full h-full rounded-lg"
-                    src="https://images.unsplash.com/photo-1571152557337-9ab79fd76eb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dHJvcGljYWwlMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    src={require("../assets/pic2.jpeg")}
                   ></img>
                   <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden opacity-0 transition duration-300 ease-in-out bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:opacity-70"></div>
                 </div>
@@ -63,7 +66,7 @@ const Food = () => {
                   <img
                     alt="gallery"
                     class="block object-cover object-center w-full h-full rounded-lg"
-                    src="https://images.unsplash.com/photo-1523371054106-bbf80586c38c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJvcGljYWwlMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    src={require("../assets/pic3.jpeg")}
                   ></img>
                   <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden opacity-0 transition duration-300 ease-in-out bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:opacity-70"></div>
                 </div>
@@ -76,7 +79,7 @@ const Food = () => {
                   <img
                     alt="gallery"
                     class="block object-cover object-center w-full h-full rounded-lg"
-                    src="https://images.unsplash.com/photo-1527786747587-f712769de1e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHRyb3BpY2FsJTIwZm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                    src={require("../assets/pic4.jpeg")}
                   ></img>
                   <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden opacity-0 transition duration-300 ease-in-out bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:opacity-70"></div>
                 </div>
@@ -89,7 +92,7 @@ const Food = () => {
                   <img
                     alt="gallery"
                     class="block object-cover object-center w-full h-full rounded-lg"
-                    src="https://images.unsplash.com/photo-1660144769509-5139d22dc2ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHRyb3BpY2FsJTIwZGluaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    src={require("../assets/pic5.jpeg")}
                   ></img>
                   <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden opacity-0 transition duration-300 ease-in-out bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:opacity-70"></div>
                 </div>
@@ -102,7 +105,7 @@ const Food = () => {
                   <img
                     alt="gallery"
                     class="block object-cover object-center w-full h-full rounded-lg"
-                    src="https://images.unsplash.com/photo-1547558840-8ad6c8e662a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dGFzdHklMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    src={require("../assets/pic6.jpeg")}
                   ></img>
                   <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden opacity-0 transition duration-300 ease-in-out bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:opacity-70"></div>
                 </div>
@@ -115,7 +118,7 @@ const Food = () => {
                   <img
                     alt="gallery"
                     class="block object-cover object-center w-full h-full rounded-lg"
-                    src="https://images.unsplash.com/photo-1584894781998-6b11134ed209?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHRhc3R5JTIwZm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                    src={require("../assets/pic7.jpeg")}
                   ></img>
                   <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden opacity-0 transition duration-300 ease-in-out bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:opacity-70"></div>
                 </div>
@@ -167,7 +170,7 @@ const Food = () => {
             {/* <!-- Single item --> */}
             <div class="carousel-item active relative float-left w-full">
               <img
-                src={require("../assets/food1Medium.jpg")}
+                src={require("../assets/food1.jpeg")}
                 class="block w-full"
                 alt="Motorbike Smoke"
               />
@@ -185,7 +188,7 @@ const Food = () => {
             {/* <!-- Single item --> */}
             <div class="carousel-item relative float-left w-full">
               <img
-                src={require("../assets/food2Medium.jpg")}
+                src={require("../assets/food2.jpeg")}
                 class="block w-full"
                 alt="Mountaintop"
               />
@@ -202,7 +205,7 @@ const Food = () => {
             {/* <!-- Single item --> */}
             <div class="carousel-item relative float-left w-full">
               <img
-                src={require("../assets/food3Medium.jpg")}
+                src={require("../assets/food3.jpeg")}
                 class="block w-full"
                 alt="Woman Reading a Book"
               />
@@ -218,7 +221,7 @@ const Food = () => {
             </div>
             <div class="carousel-item relative float-left w-full">
               <img
-                src={require("../assets/food4Medium.jpg")}
+                src={require("../assets/food4.jpeg")}
                 class="block w-full"
                 alt="Woman Reading a Book"
               />
@@ -234,7 +237,7 @@ const Food = () => {
             </div>
             <div class="carousel-item relative float-left w-full">
               <img
-                src={require("../assets/food5Medium.jpg")}
+                src={require("../assets/food5.jpeg")}
                 class="block w-full"
                 alt="Woman Reading a Book"
               />
@@ -292,27 +295,17 @@ const Food = () => {
               </a>
               <div class="p-6">
                 <h5 class="text-gray-900 text-xl font-medium mb-2">
-                  World class Burger's from every corner of the World!
+                Breakfast
                 </h5>
                 <p class="text-gray-700 text-base mb-4 font-serif	">
-                  Indulge in the ultimate burger experience with our
-                  handcrafted, decadent burgers. Made with only the freshest,
-                  highest-quality ingredients and cooked to perfection, each
-                  bite is a burst of flavor and texture. Treat yourself to the
-                  best burger you've ever had, and come back for more.
-                </p>
-                <a
-                  href="https://www.mcdonalds.com/us/en-us.html"
-                  target="_blank"
-                  class="inline-block px-6 py-2.5 bg-gray-800 text-white
-                  font-medium text-xs leading-tight uppercase rounded-full
-                  shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900
-                  focus:shadow-lg focus:outline-none focus:ring-0
-                  active:bg-gray-900 active:shadow-lg transition duration-150
-                  ease-in-out"
-                >
+                Start your day with a wholesome Sri Lankan breakfast featuring classics like freshly steamed string hoppers, creamy coconut sambol, and aromatic lentil curry. Crafted with locally sourced, fresh ingredients, our breakfast ensures an energizing and delightful start to your day</p>
+                <p>Note: Please place your order at least 4 hours before the desired serving time.</p>
+
+                
+
+                <a href="#footer-section">
                   {" "}
-                  Place your Order Now
+                  Contact Us for More Details
                 </a>
               </div>
             </div>
@@ -329,35 +322,24 @@ const Food = () => {
               </a>
               <div class="p-6">
                 <h5 class="text-gray-900 text-xl font-medium mb-2">
-                  Tacos that will blow your mind!
+                Lunch
                 </h5>
                 <p class="text-gray-700 text-base mb-4 font-serif	">
-                  Savor the rich, bold flavors of our expertly crafted tacos.
-                  Made with only the freshest, premium ingredients, each bite is
-                  a symphony of taste and texture. Our tacos are sure to
-                  tantalize your taste buds, and are the perfect meal for any
-                  occasion. Treat yourself to the ultimate taco experience, and
-                  come back for more.
+                Savor the vibrant flavors of a traditional Sri Lankan lunch, crafted with a blend of spices and love. From creamy jackfruit curry to crispy pappadam, each dish showcases the richness of our culinary heritage. Pair it with fragrant rice and enjoy a truly refreshing dining experience.
                 </p>
-                <a
-                  href="https://www.tacobell.com/"
-                  target="_blank"
-                  class="inline-block px-6 py-2.5 bg-gray-800 text-white
-                  font-medium text-xs leading-tight uppercase rounded-full
-                  shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900
-                  focus:shadow-lg focus:outline-none focus:ring-0
-                  active:bg-gray-900 active:shadow-lg transition duration-150
-                  ease-in-out"
-                >
+                <p>Note: Please place your order at least 4 hours before the desired serving time.</p>
+
+
+                <a href="#footer-section">
                   {" "}
-                  Place your Order Now
+                  Contact Us for More Details
                 </a>
               </div>
             </div>
           </div>
           {/* card 3 */}
           <div class="flex justify-center ">
-            <div class="rounded-lg shadow-lg bg-[rgba(207,181,59)] max-w-sm mb-20 mt-20 border-4 border-white mb-6">
+            <div class="rounded-lg shadow-lg bg-[rgba(207,181,59)] max-w-sm border-4 border-white mb-6">
               <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
                 <img
                   class="rounded-t-lg"
@@ -367,28 +349,16 @@ const Food = () => {
               </a>
               <div class="p-6">
                 <h5 class="text-gray-900 text-xl font-medium mb-2">
-                  Sushi fit for a Samuria!
+                Dinner
                 </h5>
                 <p class="text-gray-700 text-base mb-4">
-                  Indulge in the art of sushi with our expertly crafted rolls.
-                  Made with only the freshest, premium ingredients, each bite is
-                  a balance of flavors and texture. Whether you're a sushi
-                  connoisseur or a first-time sushi eater, our sushi rolls are
-                  sure to delight your taste buds. Treat yourself to the
-                  ultimate sushi experience, and come back for more.
+                End your day with a sumptuous Sri Lankan dinner under the tranquil evening sky. Indulge in aromatic rice and curry dishes, crispy hoppers, and a variety of sambols that highlight the best of our island cuisine. Let the soothing ambiance and delightful flavors create a memorable experience.
                 </p>
-                <a
-                  href="https://tokyojoes.com/"
-                  target="_blank"
-                  class="inline-block px-6 py-2.5 bg-gray-800 text-white
-                  font-medium text-xs leading-tight uppercase rounded-full
-                  shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900
-                  focus:shadow-lg focus:outline-none focus:ring-0
-                  active:bg-gray-900 active:shadow-lg transition duration-150
-                  ease-in-out"
-                >
+                <p>Note: Please place your order at least 4 hours before the desired serving time.</p>
+
+                <a href="#footer-section">
                   {" "}
-                  Place your Order Now
+                  Contact Us for More Details
                 </a>
               </div>
             </div>
@@ -400,44 +370,3 @@ const Food = () => {
 };
 
 export default Food;
-
-// // <div class="grid grid-cols-3 gap-4">
-//   <div class="mb-4">
-//   <div class="relative overflow-hidden bg-no-repeat bg-cover max-w-xs">
-//     <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" class="max-w-xs" alt="Louvre" />
-//     <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-50 transition duration-300 ease-in-out bg-indigo-700"></div>
-//   </div>
-// </div>
-// <div class="mb-4">
-//   <div class="relative overflow-hidden bg-no-repeat bg-cover max-w-xs">
-//     <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" class="max-w-xs" alt="Louvre" />
-//     <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-20 transition duration-300 ease-in-out bg-purple-700"></div>
-//   </div>
-// </div>
-// <div class="mb-4">
-//   <div class="relative overflow-hidden bg-no-repeat bg-cover max-w-xs">
-//     <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" class="max-w-xs" alt="Louvre" />
-//     <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-70 transition duration-300 ease-in-out bg-green-700"></div>
-//   </div>
-// </div>
-// </div>
-// <div class="grid grid-cols-3 gap-4">
-// <div class="mb-4 md:mb-0">
-//   <div class="relative overflow-hidden bg-no-repeat bg-cover max-w-xs">
-//     <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" class="max-w-xs" alt="Louvre" />
-//     <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-30 transition duration-300 ease-in-out bg-red-700"></div>
-//   </div>
-// </div>
-// <div class="mb-4 md:mb-0">
-//   <div class="relative overflow-hidden bg-no-repeat bg-cover max-w-xs">
-//     <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" class="max-w-xs" alt="Louvre" />
-//     <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-40 transition duration-300 ease-in-out bg-white"></div>
-//   </div>
-// </div>
-// <div class="mb-4 md:mb-0">
-//   <div class="relative overflow-hidden bg-no-repeat bg-cover max-w-xs">
-//     <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" class="max-w-xs" alt="Louvre" />
-//     <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-60 transition duration-300 ease-in-out bg-blue-400"></div>
-//   </div>
-// </div>
-// </div>
