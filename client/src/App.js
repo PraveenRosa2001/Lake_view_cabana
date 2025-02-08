@@ -7,8 +7,8 @@ import {
   Payment,
   Food,
   Admin,
-  Spa,
 } from "./components";
+import Nearby from "./components/nearby/nearby";
 import "./index.css";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -95,6 +95,15 @@ function App() {
                 )}
                 <Navbar />
 
+              <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/golfCourse" element={<GolfCourse />} />
+                <Route exact path="/rooms" element={<Rooms />} />
+                <Route exact path="/payment" element={<Payment />} />
+                <Route exact path="/food" element={<Food />} />
+                <Route exact path="/admin" element={<Admin />} />
+                <Route exact path="/nearby" element={<Nearby />} />
+              </Routes>
                 <Routes>
                   <Route exact path="/" element={<Home />} />
                   <Route exact path="/golfCourse" element={<GolfCourse />} />
