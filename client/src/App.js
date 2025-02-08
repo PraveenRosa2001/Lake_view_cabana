@@ -95,15 +95,6 @@ function App() {
                 )}
                 <Navbar />
 
-              <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route exact path="/golfCourse" element={<GolfCourse />} />
-                <Route exact path="/rooms" element={<Rooms />} />
-                <Route exact path="/payment" element={<Payment />} />
-                <Route exact path="/food" element={<Food />} />
-                <Route exact path="/admin" element={<Admin />} />
-                <Route exact path="/nearby" element={<Nearby />} />
-              </Routes>
                 <Routes>
                   <Route exact path="/" element={<Home />} />
                   <Route exact path="/golfCourse" element={<GolfCourse />} />
@@ -111,7 +102,7 @@ function App() {
                   <Route exact path="/payment" element={<Payment />} />
                   <Route exact path="/food" element={<Food />} />
                   <Route exact path="/admin" element={<Admin />} />
-                  <Route exact path="/spa" element={<Spa />} />
+                  <Route exact path="/nearby" element={<Nearby />} />
                 </Routes>
 
                 <Footer />
