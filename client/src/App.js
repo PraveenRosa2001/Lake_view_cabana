@@ -7,8 +7,8 @@ import {
   Payment,
   Food,
   Admin,
-  Spa,
 } from "./components";
+import Nearby from "./components/nearby/nearby";
 
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -59,7 +59,7 @@ function App() {
                 <Route exact path="/payment" element={<Payment />} />
                 <Route exact path="/food" element={<Food />} />
                 <Route exact path="/admin" element={<Admin />} />
-                <Route exact path="/spa" element={<Spa />} />
+                <Route exact path="/nearby" element={<Nearby />} />
               </Routes>
 
               <Footer />
