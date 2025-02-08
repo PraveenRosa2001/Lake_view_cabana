@@ -1,11 +1,40 @@
-import { lux } from "../assets";
-import React, { useState } from "react";
+import main1 from "../assets/main1.JPG"; // Ensure the correct path and file extension
+import main2 from "../assets/main2.JPG";
+import main3 from "../assets/main3.JPG";
+import React, { useState, useEffect } from "react";
 import { useDateContext } from "../utils/DateContext";
 import { useMutation, useQuery } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 import { checkDEV } from "@apollo/client/utilities/globals";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Come from "../assets/Come.JPG";
+import { Link } from "react-router-dom";
+import GolfCourse from '../components/GolfCourse';
+import { Route } from 'react-router-dom';
+
+<Route path="/golfcourse" component={GolfCourse} />
 
 const Home = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [main1, main2, main3];
+
+  // Auto-change images every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval); // Cleanup interval
+  }, [images.length]);
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
   const navigate = useNavigate();
   const {
     startDateStr,
@@ -53,26 +82,42 @@ const Home = () => {
   }
   return (
     <div>
-      <section>
-        <meta charSet="UTF-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+      <section className="relative overflow-hidden">
+        {/* Image with Creative Transition */}
+        <img
+          key={currentImageIndex}
+          className="z-[-1] w-full h-[500px] object-cover animate-fade-in transition-all duration-700"
+          src={images[currentImageIndex]}
+          alt={`Main Image ${currentImageIndex + 1}`}
+        />
 
-        <video
-          className="relative z-[-1] w-auto min-w-full max-w-none"
-          muted
-          autoPlay="autoPlay"
-          loop
+        {/* Left Arrow */}
+        <button
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black rounded-full p-3 shadow-lg hover:bg-gray-700 transition"
+          onClick={handlePrevImage}
         >
-          <source src={lux} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          <FaArrowLeft size={20} />
+        </button>
+
+        {/* Right Arrow */}
+        <button
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black rounded-full p-3 shadow-lg hover:bg-gray-700 transition"
+          onClick={handleNextImage}
+        >
+          <FaArrowRight size={20} />
+        </button>
       </section>
 
-      <section className="flex justify-center bg-black w-full pt-4 border-t-2 border-[#d2b947]">
+      <section className="flex justify-center bg-black w-full py-4 border-t-4 border-[#d2b947] pt-5">
         <form className="w-full max-w-sm mb-10" onSubmit={handleFormSubmit}>
-          <h1 className="text-white">MAKE A RESERVATION</h1>
+        <h1 className="text-white bg-black py-2 px--6 inline-block text-4xl font-extrabold tracking-wider uppercase rounded-md shadow-2xl animate-bounce hover:bg-[#d2b947] hover:text-black hover:scale-110 hover:shadow-[0px_0px_15px_2px_rgba(210,185,71,0.7)] hover:rotate-6 transition-all duration-500 whitespace-nowrap">
+  MAKE A RESERVATION
+</h1>
+
+
+
+
+
           <div className="flex items-center border-[rgba(207,181,59)] border-y py-2">
             <div className="inline-block relative w-64 mr-4">
               <input
@@ -109,33 +154,63 @@ const Home = () => {
         </form>
       </section>
 
-      <section className=" bg-[#faf7eb] border-8 border-[#d2b947] flex flex-wrap justify-between ">
-        <div className=" mb-10 w-1/2 ">
-          <h1 className="text-[48px] font-economica font-bold  drop-shadow-[2px_2px_.5px_#d2b947] p-10">
+      <section className="bg-[#faf7eb] border-8 border-[#d2b947] flex flex-wrap justify-between items-center">
+        {/* Left Section */}
+        <div className="mb-10 w-full md:w-1/2 px-4">
+          <h1 className="text-[48px] font-economica font-bold drop-shadow-[2px_2px_.5px_#d2b947] p-10 text-center">
             Come Stay with Us
           </h1>
-
-          <p className=" text-[20px] font-economica font-bold bg-[#faf7eb] max-w-[700px] mx-auto text-center">
-            Enjoy a desirable location next to Ala Moana Center, the world's
-            largest open-air shopping mall. Stay just steps from Hawaii's most
-            prestigious shopping venue showcasing fashion brands, premier
-            department stores, and specialty retailers that include Louis
-            Vuitton, Nordstrom and Williams-Sonoma. TripAdvisor reviewers rate
-            the Melie among the top 20 hotels in Hawaii for travelers. Guests
-            have access to complimentary Wi-Fi, a 24/7 business center, and
-            extensive meeting and banquet facilities. The hotel's deluxe
-            accommodations and superb location, just a 5-minute walk from the
-            Hawaii Convention Center, are preferred by conference attendees. The
-            Malie is 1.5 miles from Waikiki Beach, 2.5 miles from downtown
-            Honolulu's financial center and government offices, and a quick 8
-            miles from Honolulu International Airport.
+          <p className="text-[20px] font-economica font-bold bg-[#faf7eb] max-w-[700px] mx-auto text-justify">
+            Nestled along the serene seaside of Tangalle,{" "}
+            <span className="font-bold text-[#d2b947]">
+              Lake View Cabana Paradise & Villa
+            </span>{" "}
+            offers a tranquil escape with breathtaking views and unparalleled
+            hospitality. Our villa is a premier destination for those seeking a
+            perfect blend of luxury and nature. Whether you're here to unwind by
+            the pristine beaches or explore the vibrant local culture, our villa
+            provides the ideal setting for an unforgettable getaway. With our{" "}
+            <span className="font-bold text-[#d2b947]">
+              streamlined booking system
+            </span>
+            , you can effortlessly reserve your stay, ensuring a hassle-free
+            experience from the moment you arrive. Enjoy our{" "}
+            <span className="font-bold text-[#d2b947]">
+              interactive food menu
+            </span>
+            , featuring a variety of culinary delights that cater to every
+            palate, and explore the nearby attractions with our comprehensive
+            guide. Need transportation? Our{" "}
+            <span className="font-bold text-[#d2b947]">
+              integrated transport booking feature
+            </span>{" "}
+            makes it easy to arrange your travel needs, while our{" "}
+            <span className="font-bold text-[#d2b947]">
+              24/7 live chat support
+            </span>{" "}
+            ensures you’re always taken care of. At Lake View Cabana Paradise &
+            Villa, we pride ourselves on offering modern conveniences like{" "}
+            <span className="font-bold text-[#d2b947]">
+              secure payment gateways
+            </span>{" "}
+            and{" "}
+            <span className="font-bold text-[#d2b947]">
+              QR code integration
+            </span>{" "}
+            for quick access to essential information. Whether you're here for a
+            romantic retreat, a family vacation, or a solo adventure, we promise
+            a stay that’s as seamless as it is memorable. Come, stay with us,
+            and experience the perfect harmony of comfort, convenience, and
+            natural beauty.
           </p>
         </div>
-        <div className=" ">
+
+        {/* Right Section (Image) */}
+        <div className="flex justify-center items-center w-full md:w-1/2 px-4">
           <img
-            src="https://images.unsplash.com/reserve/8T8J12VQxyqCiQFGa2ct_bahamas-atlantis.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fHRyb3BpY2FsJTIwaG90ZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
-            alt="hotel"
-            className="  "
+            src={Come} // Ensure this points to the correct path, like 'assets/Come.JPG'
+            alt="Come Image" // Add alt text for accessibility
+            className="w-full h-auto max-w-[600px] object-cover pt-10 pb-20 pr-20"
           />
         </div>
       </section>
@@ -222,17 +297,22 @@ const Home = () => {
                   alt=""
                 />
               </a>
-              <div class="p-6">
-                <h5 class="text-[rgba(207,181,59)] text-xl font-medium mb-2 drop-shadow-[2px_2px_1.5px_white]">
-                  Golf in places so beautiful that you will never want to leave!
-                </h5>
-                <button
-                  type="button"
-                  class="w-full inline-block px-6 py-2 border-2 border-[rgba(207,181,59)] text-white font-medium text-xs leading-normal uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out drop-shadow-[2px_2px_1.5px_white]"
-                >
-                  Click here to swing like a Pro!
-                </button>
-              </div>
+              <div className="p-6">
+  <h5 className="text-[rgba(207,181,59)] text-xl font-medium mb-2 drop-shadow-[2px_2px_1.5px_white]">
+    After one day with us you will feel like royalty!
+  </h5>
+  <Link
+    to="/golfcourse"  // Adjust the URL path for your GolfCourse page
+  >
+    <button
+      type="button"
+      className="w-full inline-block px-6 py-2 border-2 border-[rgba(207,181,59)] text-white font-medium text-xs leading-normal uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out drop-shadow-[2px_2px_1.5px_white]"
+    >
+      Click here to swing like a Pro!
+    </button>
+  </Link>
+</div>
+
             </div>
           </div>
           <div class="flex justify-center mb-8 mt-2 border-solid border-[rgba(207,181,59)] border-4 rounded max-w-[700px]">
@@ -345,18 +425,22 @@ const Home = () => {
       </section>
 
       <section className="border-y-8 border-[#d2b947]">
-        <iframe
-          width="100%"
-          height="712"
-          frameborder="0"
-          scrolling="no"
-          marginheight="0"
-          marginwidth="0"
-          id="gmap_canvas"
-          src="https://maps.google.com/maps?width=1201&amp;height=712&amp;hl=en&amp;q=%20kihei+(The%20Malie%20Hotel)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-        ></iframe>
-        <a href="https://maps-generator.com/"></a>
-      </section>
+  <iframe
+    width="100%"
+    height="712"
+    frameBorder="0"
+    scrolling="no"
+    marginHeight="0"
+    marginWidth="0"
+    src="https://www.google.com/maps/embed/v1/place?q=Lake+View+Cabana,+Tangalle,+Sri+Lanka&key=AIzaSyDQhGhc9igICKP7jhgk2WeFAHW8dlLgkBk"
+    allowFullScreen=""
+    aria-hidden="false"
+    tabIndex="0"
+  ></iframe>
+</section>
+
+
+
     </div>
   );
 };

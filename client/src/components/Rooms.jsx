@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-
+import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 import { useDateContext } from "../utils/DateContext";
 import { useLazyQuery, useQuery, useMutation } from "@apollo/client";
 import { QUERY_ROOMS, QUERY_CHECKOUT } from "../utils/queries";
 import { loadStripe } from "@stripe/stripe-js";
-import { words } from "../assets";
+
 
 const Rooms = () => {
   useEffect(() => {
@@ -186,7 +186,7 @@ const Rooms = () => {
           <h3 className="pl-10 text-[24px] pt-2 text-[#d2b947]">
             Ask us about
           </h3>
-          <img src={words} alt="logo" className="w-[200px]" />
+          <img src={logo} alt="Lake View Cabana Paradise & Villa Logo" className="w-[250px] h-[100px] ml-4" />
           <h3 className="pl-7 text-[24px] text-[#d2b947]">Rewards Program</h3>
         </div>
       </form>

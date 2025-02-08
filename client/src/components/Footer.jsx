@@ -1,42 +1,51 @@
-import { logo } from "../assets";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaYoutube,
+  FaRegCalendarAlt,
+} from "react-icons/fa";
 
 const Footer = () => {
-    return (
-        <div id="footer-section" className="bg-black text-white font-poppins pt-10 ">
-            <div className="flex flex-col items-center justify-center">
-                <div>
-                    <p className="font-economica text-[32px] pb-2 text-[rgba(207,181,59)] ">
-                        222 Malie Way | Maui, HI 96729 | 808.123.9876
-                    </p>
-                </div>
-                <div>
-                    <img
-                        src={logo}
-                        alt="logo"
-                        className="max-w-[200px] items-center pb-2"
-                    />
-                </div>
-                <ul className="list-none sm:flex hidden justify-end items-center flex-1 z-[5]">
-                    <li>
-                        <Link
-                            className={` cursor-pointer text-[18px] text-[rgba(207,181,59)] mr-10 hover:text-[#faf7ab] focus:text-[#faf7ab] 
+  return (
+    <div
+      id="footer-section"
+      className="bg-black text-white font-poppins pt-10 "
+    >
+      <div className="flex flex-col items-center justify-center">
+        <div>
+          <p className="font-economica text-[32px] pb-2 text-[rgba(207,181,59)] ">
+            Lake View Cabana Paradise & Villa
+          </p>
+        </div>
+        <div>
+          <img
+            src={logo}
+            alt="logo"
+            className="w-[250px] h-[100px] items-center pb-2"
+          />
+        </div>
+        <ul className="list-none sm:flex hidden justify-end items-center flex-1 z-[5]">
+          <li>
+            <Link
+              className={` cursor-pointer text-[18px] text-[rgba(207,181,59)] mr-10 hover:text-[#faf7ab] focus:text-[#faf7ab] 
                             hover:transition ease-in-out delay-150  duration-300`}
-                            aria-current="page"
-                            to="/golfCourse"
-                        >
-                            Golf
-                        </Link>
-                    </li>
+              aria-current="page"
+              to="/Rooms"
+            >
+              Booking
+            </Link>
+          </li>
 
           <li>
             <Link
               className={` cursor-pointer text-[18px] text-[rgba(207,181,59)]  mr-10 hover:text-[#faf7ab] focus:text-[#faf7ab] 
               hover:transition ease-in-out delay-150  duration-300`}
               aria-current="page"
-              to="/contact"
+              to="/Food"
             >
-              Relax
+              Food Menu
             </Link>
           </li>
           <li>
@@ -44,81 +53,63 @@ const Footer = () => {
               className={` cursor-pointer text-[18px] text-[rgba(207,181,59)]  mr-10 hover:text-[#faf7ab] focus:text-[#faf7ab] 
               hover:transition ease-in-out delay-150  duration-300`}
               aria-current="page"
-              to="/rooms"
+              to="/spa2"
             >
-              Stay
+              Nearby Attractions
             </Link>
           </li>
           <li>
             <Link
-              to="/food"
+              
               className={` cursor-pointer text-[18px] text-[rgba(207,181,59)]  mr-10 hover:text-[#faf7ab] focus:text-[#faf7ab] 
               hover:transition ease-in-out delay-150  duration-300`}
-              aria-current="page"
+              to="/GolfCourse"
             >
-              Eat
+              Transport
             </Link>
           </li>
         </ul>
       </div>
       <div>
-        <div className="flex justify-around py-10 text-center text-[rgba(207,181,59)]">
-          <div className="">
-            <p className="underline">CAREERS</p>
-            <div className="text-[12px]">
-              <p>Career Portal </p>
-              <p>Tech Blog </p>
+        <div className="flex justify-center py-10 text-center text-[rgba(207,181,59)]">
+          <div className="flex flex-col items-center gap-6 text-[40px]">
+            {" "}
+            {/* Centered icons and adjusted size */}
+            <div className="flex gap-8">
+              <a
+                href="https://www.booking.com/hotel/lk/lake-view-cabana-restaurant.html"
+                className="text-[#0073bb] hover:text-[#005f8a]"
+                title="Booking.com"
+              >
+                <FaRegCalendarAlt />
+              </a>
+              <a
+                href="https://www.facebook.com"
+                className="text-[#3b5998] hover:text-[#2d4373]"
+                title="Facebook"
+              >
+                <FaFacebook />
+              </a>
+              <a
+                href="https://www.instagram.com"
+                className="text-[#e1306c] hover:text-[#9c1b4b]"
+                title="Instagram"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://www.youtube.com"
+                className="text-[#FF0000] hover:text-[#c4302b]"
+                title="YouTube"
+              >
+                <FaYoutube />
+              </a>
             </div>
-          </div>
-          <div>
-            <p className="underline">COMPANY</p>
-            <div className="text-[12px]">
-              <p>Siddharth Desai </p>
-              <p>Jason Duran </p>
-              <p>Darin Palombo </p>
-              <p>Ryan Larson</p>
-              <p>Nicolette Boggs</p>
-              <p>Erich Ebbinghaus</p>
-            </div>
-          </div>
-          <div>
-            <p className="underline">LEGAL</p>
-            <div className="text-[12px]">
-              <p>Privacy </p>
-              <p>Terms</p>
-              <p>Cookie Policy</p>
-              <p>Intellectual Property</p>
-            </div>
-          </div>
-          <div>
-            <p className="underline">SOCIAL</p>
-            <div className="text-[12px]">
-              <p>
-                {" "}
-                <a href="https://github.com/SHD327"> Sid's GitHub</a>{" "}
-              </p>
-              <p>
-                {" "}
-                <a href="https://github.com/BluSkreen"> Jason's GitHub</a>{" "}
-              </p>
-              <p>
-                {" "}
-                <a href="https://github.com/Darin1027">Darin's GitHub</a>{" "}
-              </p>
-              <p>
-                {" "}
-                <a href="https://github.com/larsonrj"> Ryan's GitHub </a>
-              </p>
-              <p>
-                {" "}
-                <a href="https://github.com/NicoletteBoggs">
-                  {" "}
-                  Nicolette's GitHub{" "}
-                </a>
-              </p>
-              <p>
-                {" "}
-                <a href="https://github.com/eebbinghaus"> Erich's GitHub </a>
+            <div className="mt-4 text-center">
+              {" "}
+              {/* Copyright near icons */}
+              <p className="text-[18px]">
+                © 2025 Lake View Cabana. All Rights Reserved.
               </p>
             </div>
           </div>
