@@ -58,16 +58,7 @@ const Footer = () => {
               Nearby Attractions
             </Link>
           </li>
-          <li>
-            <Link
-              
-              className={` cursor-pointer text-[18px] text-[rgba(207,181,59)]  mr-10 hover:text-[#faf7ab] focus:text-[#faf7ab] 
-              hover:transition ease-in-out delay-150  duration-300`}
-              to="/GolfCourse"
-            >
-              Transport
-            </Link>
-          </li>
+          
         </ul>
       </div>
       <div>

@@ -6,13 +6,11 @@ const attractions = [
   {
     id: 1,
     name: "Swim at Goyambokka Beach",
-    description:
-      "As beautiful as they are, most beaches in the Tangalle area are not fit for swimming as the waves are too strong",
-    image:
-      "https://www.cantravelwilltravel.com/wp-content/uploads/goyambokka-beach-tangalle-sri-lanka.jpg",
-    location: "6.0158151,80.7661119",
+    description: "As beautiful as they are, most beaches in the Tangalle area are not fit for swimming as the waves are too strong",
+    image: "https://www.cantravelwilltravel.com/wp-content/uploads/goyambokka-beach-tangalle-sri-lanka.jpg",
+    location: "6.00916815039749, 80.7805867861565",
     category: "Entertainment",
-    coordinates: { lat: 40.7829, lng: -73.9654 },
+    coordinates: { lat: 6.00916815039749, lng: 80.7805867861565 },
   },
   {
     id: 2,
