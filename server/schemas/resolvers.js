@@ -1,4 +1,4 @@
-const { User, Hotel, Room, Reservation, Order } = require("../models");
+const { User, Hotel, Room, Reservation, MenuItem } = require("../models");
 
 const { signToken, signAdmin } = require("../utils/auth");
 const { AuthenticationError } = require("apollo-server-express");
@@ -7,9 +7,6 @@ const stripe = require("stripe")(
 );
 const resolvers = {
   Query: {
-    user: async (parent, { username }) => {
-      return User.findOne({ username: username });
-    },
     users: async () => {
       return User.find();
     },
