@@ -7,9 +7,22 @@ import Rooms from "./Rooms";
 import Payment from "./Payment";
 import Food from "./Food";
 import Spa from "./spa2";
+import Nearby from "./nearby/nearby";
+import DateRange from "./DateRange";
 
-import Admin from "./Admin"
+import Admin from "./Admin";
 
-export { Navbar, Home, Footer, Modal, GolfCourse, Rooms, Payment, Food, Admin, Spa };
-
-
+export {
+  Navbar,
+  Home,
+  Footer,
+  Modal,
+  GolfCourse,
+  Rooms,
+  Payment,
+  Food,
+  Admin,
+  Spa,
+  Nearby,
+  DateRange,
+};
