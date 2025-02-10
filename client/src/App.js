@@ -9,6 +9,7 @@ import {
   Admin,
 } from "./components";
 import Nearby from "./components/nearby/nearby";
+import Menu from "./components/menu";
 import "./index.css";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -97,10 +98,10 @@ function App() {
 
                 <Routes>
                   <Route exact path="/" element={<Home />} />
-                  <Route exact path="/golfCourse" element={<GolfCourse />} />
+
                   <Route exact path="/rooms" element={<Rooms />} />
                   <Route exact path="/payment" element={<Payment />} />
-                  <Route exact path="/food" element={<Food />} />
+                  <Route exact path="/food" element={<Menu />} />
                   <Route exact path="/admin" element={<Admin />} />
                   <Route exact path="/nearby" element={<Nearby />} />
                 </Routes>

@@ -1,4 +1,4 @@
-import { close, logo, menu } from "../assets";
+import { close, menu } from "../assets";
 import { useLoginContext } from "../utils/LoginContext";
 import Auth from "../utils/auth";
 import { useState, useEffect } from "react";
@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { useMutation, useQuery } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import { ADD_USER } from "../utils/mutations";
+import logo from "../assets/logo.png";
 
 const Modal = ({ visible, onClose }) => {
   const [modalSignIn, setModalSignIn] = useState(true); // MODAL TOGGLE
