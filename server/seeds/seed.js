@@ -1,10 +1,11 @@
 const db = require("../config/connection");
-const { User, Hotel, Room, Reservation, Order } = require("../models");
+const { User, Hotel, Room, Reservation, MenuItem } = require("../models");
 
 const roomData = require("./room.json");
 const hotelData = require("./hotel.json");
 const userData = require("./user.json");
 const reservationData = require("./reservation.json");
+const menuItemData = require("./menuItem.json");
 // git commit -m "added apollo in package"
 //Delete all existing data upon start
 db.once("open", async () => {
