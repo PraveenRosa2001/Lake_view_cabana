@@ -11,14 +11,12 @@ const Food = () => {
     <div>
       {/* intro photo */}
       <section>
-  <img
-    src={require("../assets/foodCollage.jpeg")}
-    className="w-full h-[100vh] object-cover"
-    alt="Lake View"
-  />
-</section>
-
-
+        <img
+          src={require("../assets/foodCollage.jpeg")}
+          className="w-full h-[100vh] object-cover"
+          alt="Lake View"
+        />
+      </section>
 
       {/* about section */}
       <section className="p-4 bg-[rgba(207,181,59)]">
@@ -295,18 +293,21 @@ const Food = () => {
               </a>
               <div class="p-6">
                 <h5 class="text-gray-900 text-xl font-medium mb-2">
-                Breakfast
+                  Breakfast
                 </h5>
                 <p class="text-gray-700 text-base mb-4 font-serif	">
-                Start your day with a wholesome Sri Lankan breakfast featuring classics like freshly steamed string hoppers, creamy coconut sambol, and aromatic lentil curry. Crafted with locally sourced, fresh ingredients, our breakfast ensures an energizing and delightful start to your day</p>
-                <p>Note: Please place your order at least 4 hours before the desired serving time.</p>
+                  Start your day with a wholesome Sri Lankan breakfast featuring
+                  classics like freshly steamed string hoppers, creamy coconut
+                  sambol, and aromatic lentil curry. Crafted with locally
+                  sourced, fresh ingredients, our breakfast ensures an
+                  energizing and delightful start to your day
+                </p>
+                <p>
+                  Note: Please place your order at least 4 hours before the
+                  desired serving time.
+                </p>
 
-                
-
-                <a href="#footer-section">
-                  {" "}
-                  Contact Us for More Details
-                </a>
+                <a href="#footer-section"> Contact Us for More Details</a>
               </div>
             </div>
           </div>
@@ -321,19 +322,20 @@ const Food = () => {
                 />
               </a>
               <div class="p-6">
-                <h5 class="text-gray-900 text-xl font-medium mb-2">
-                Lunch
-                </h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2">Lunch</h5>
                 <p class="text-gray-700 text-base mb-4 font-serif	">
-                Savor the vibrant flavors of a traditional Sri Lankan lunch, crafted with a blend of spices and love. From creamy jackfruit curry to crispy pappadam, each dish showcases the richness of our culinary heritage. Pair it with fragrant rice and enjoy a truly refreshing dining experience.
+                  Savor the vibrant flavors of a traditional Sri Lankan lunch,
+                  crafted with a blend of spices and love. From creamy jackfruit
+                  curry to crispy pappadam, each dish showcases the richness of
+                  our culinary heritage. Pair it with fragrant rice and enjoy a
+                  truly refreshing dining experience.
                 </p>
-                <p>Note: Please place your order at least 4 hours before the desired serving time.</p>
+                <p>
+                  Note: Please place your order at least 4 hours before the
+                  desired serving time.
+                </p>
 
-
-                <a href="#footer-section">
-                  {" "}
-                  Contact Us for More Details
-                </a>
+                <a href="#footer-section"> Contact Us for More Details</a>
               </div>
             </div>
           </div>
@@ -348,18 +350,20 @@ const Food = () => {
                 />
               </a>
               <div class="p-6">
-                <h5 class="text-gray-900 text-xl font-medium mb-2">
-                Dinner
-                </h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2">Dinner</h5>
                 <p class="text-gray-700 text-base mb-4">
-                End your day with a sumptuous Sri Lankan dinner under the tranquil evening sky. Indulge in aromatic rice and curry dishes, crispy hoppers, and a variety of sambols that highlight the best of our island cuisine. Let the soothing ambiance and delightful flavors create a memorable experience.
+                  End your day with a sumptuous Sri Lankan dinner under the
+                  tranquil evening sky. Indulge in aromatic rice and curry
+                  dishes, crispy hoppers, and a variety of sambols that
+                  highlight the best of our island cuisine. Let the soothing
+                  ambiance and delightful flavors create a memorable experience.
                 </p>
-                <p>Note: Please place your order at least 4 hours before the desired serving time.</p>
+                <p>
+                  Note: Please place your order at least 4 hours before the
+                  desired serving time.
+                </p>
 
-                <a href="#footer-section">
-                  {" "}
-                  Contact Us for More Details
-                </a>
+                <a href="#footer-section"> Contact Us for More Details</a>
               </div>
             </div>
           </div>
